@@ -11,7 +11,7 @@ export default function HomeSection() {
         src={bgImage}
         alt="Image de fond"
         fill
-        className="object-cover scale-105 brightness-70" 
+        className="object-cover scale-105 brightness-50 blur-sm"
         priority
       />
 

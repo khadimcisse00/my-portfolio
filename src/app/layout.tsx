@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-theme="dark" >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

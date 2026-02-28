@@ -57,7 +57,7 @@ export default function ContactSection() {
         Contact
       </h2>
       <p className="text-base-content/70 mb-14 text-center max-w-xl">
-      N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.
+        N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.
       </p>
 
       <div className="card bg-base-100 shadow-lg w-full max-w-2xl">
@@ -68,7 +68,7 @@ export default function ContactSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="form-control w-full">
                 <label className="label">
-                  <span className="label-text font-medium">Prénom *</span>
+                  <span className="label-text font-medium text-base-content">Prénom *</span>
                 </label>
                 <input
                   type="text"
@@ -76,13 +76,13 @@ export default function ContactSection() {
                   value={form.prenom}
                   onChange={handleChange}
                   placeholder="Jean"
-                  className="input input-bordered focus:input-primary w-full"
+                  className="input input-bordered border-base-content/30 bg-base-100 text-base-content placeholder:text-base-content/40 focus:input-primary w-full"
                   required
                 />
               </div>
               <div className="form-control w-full">
                 <label className="label">
-                  <span className="label-text font-medium">Nom *</span>
+                  <span className="label-text font-medium text-base-content">Nom *</span>
                 </label>
                 <input
                   type="text"
@@ -90,7 +90,7 @@ export default function ContactSection() {
                   value={form.nom}
                   onChange={handleChange}
                   placeholder="Dupont"
-                  className="input input-bordered focus:input-primary w-full"
+                  className="input input-bordered border-base-content/30 bg-base-100 text-base-content placeholder:text-base-content/40 focus:input-primary w-full"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ export default function ContactSection() {
             {/* Email */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium">Adresse mail *</span>
+                <span className="label-text font-medium text-base-content">Adresse mail *</span>
               </label>
               <input
                 type="email"
@@ -107,7 +107,7 @@ export default function ContactSection() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="jean.dupont@email.com"
-                className="input input-bordered focus:input-primary w-full"
+                className="input input-bordered border-base-content/30 bg-base-100 text-base-content placeholder:text-base-content/40 focus:input-primary w-full"
                 required
               />
             </div>
@@ -115,15 +115,15 @@ export default function ContactSection() {
             {/* Objet */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium">Objet *</span>
+                <span className="label-text font-medium text-base-content">Objet *</span>
               </label>
               <input
                 type="text"
                 name="objet"
                 value={form.objet}
                 onChange={handleChange}
-                placeholder="Proposition de poste, question, etc..."
-                className="input input-bordered focus:input-primary w-full"
+                placeholder="Proposition de poste, collaboration..."
+                className="input input-bordered border-base-content/30 bg-base-100 text-base-content placeholder:text-base-content/40 focus:input-primary w-full"
                 required
               />
             </div>
@@ -131,14 +131,14 @@ export default function ContactSection() {
             {/* Message */}
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-medium">Message *</span>
+                <span className="label-text font-medium text-base-content">Message *</span>
               </label>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Votre message..."
-                className="textarea textarea-bordered focus:textarea-primary h-48 resize-none w-full"
+                className="textarea textarea-bordered border-base-content/30 bg-base-100 text-base-content placeholder:text-base-content/40 focus:textarea-primary h-48 resize-none w-full"
                 required
               />
             </div>
@@ -155,7 +155,7 @@ export default function ContactSection() {
                 required
               />
               <label htmlFor="rgpd" className="text-sm text-base-content/70 cursor-pointer">
-              
+
                 J'accepte que mes données personnelles (nom, prénom, adresse mail)
                 soient utilisées uniquement dans le but de me recontacter en réponse
                 à ce message. Aucune donnée ne sera transmise à des tiers. *

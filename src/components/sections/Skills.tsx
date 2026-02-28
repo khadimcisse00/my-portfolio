@@ -4,32 +4,32 @@ import { useEffect, useRef, useState } from "react";
 import { skillsData, type SkillCategory } from "@/data/skills"; // ← import depuis le fichier dédié
 
 function SkillBar({ name, level, animate }: { name: string; level: number; animate: boolean }) {
-    return (
-      <div className="mb-5">
-        {/* Nom à gauche + % à droite */}
-        <div className="flex justify-between items-center mb-2">
-          <span className="font-bold text-base-content uppercase tracking-wider text-xs md:text-sm">
-            {name}
-          </span>
-          <span className="text-primary font-bold text-sm">
-            {animate ? `${level}%` : "0%"}
-          </span>
-        </div>
-  
-        {/* Barre fond = 100% bien visible */}
-        <div className="w-full h-3 bg-gray-400/40 rounded-full overflow-hidden">
-          {/* Barre remplie = niveau réel */}
-          <div
-            className="h-3 rounded-full transition-all duration-1000 ease-out"
-            style={{
-              width: animate ? `${level}%` : "0%",
-              background: "linear-gradient(to right, oklch(var(--p)), oklch(var(--s)))",
-            }}
-          />
-        </div>
+  return (
+    <div className="mb-5">
+      {/* Nom à gauche + % à droite */}
+      <div className="flex justify-between items-center mb-2">
+        <span className="font-bold text-base-content uppercase tracking-wider text-xs md:text-sm">
+          {name}
+        </span>
+        <span className="text-primary font-bold text-sm">
+          {animate ? `${level}%` : "0%"}
+        </span>
       </div>
-    );
-  }
+
+      {/* Barre fond = 100% bien visible */}
+      <div className="skill-bar-bg w-full h-3 rounded-full overflow-hidden">
+        {/* Barre remplie = niveau réel */}
+        <div
+          className="h-3 rounded-full transition-all duration-1000 ease-out"
+          style={{
+            width: animate ? `${level}%` : "0%",
+            background: "linear-gradient(to right, oklch(var(--p)), oklch(var(--s)))",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null);
